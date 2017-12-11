@@ -15,13 +15,23 @@ ul{
     margin:0;
     padding:0;
 }
+
+
+.button_1{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left:20px;
+    padding-right:20px;
+    color: #ffffff;
+}
 /*Header*/
 header{
     background:#35424a;
     color:#ffffff;
     padding-top:30px;
     min-height:70px;
-    border-bottom:#e8491d 3px solid; 
+    border-bottom:#cca7cc 3px solid; 
 }
 
 header a{
@@ -53,7 +63,7 @@ header nav{
 }
 
 header .highlight, header .current a{
-    color:#e8491d;
+    color:#cca7cc;
     font-weight:bold;
 }
 
@@ -64,7 +74,7 @@ header a:hover{
 /*Showcase*/
 #showcase{
     min-height:400px;
-    background:url("Ayy.jpg") no-repeat -200px -400px;
+    background:url("./Images/Space.jpg") no-repeat -200px -400px;
     text-align:center;
     color:#ffffff;
     
@@ -80,6 +90,8 @@ header a:hover{
     font-size:20px;
 }
 
+
+/*newsletter*/
 #newsletter{
     padding:15px;
     color:#ffffff;
@@ -103,4 +115,27 @@ header a:hover{
     width:250px;
 }
 
+    /*boxes*/
+#boxes {
+    margin-top:20px;
+}
+
+#boxes .box{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
     
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+footer{
+    padding:20px;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:##cca7cc;
+    text-align: center;
+}

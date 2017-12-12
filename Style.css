@@ -2,7 +2,7 @@ body{
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
-    background-color: #f4f4f4;
+    background-color: #bcbdd6;
 }
 
 /*Global*/
@@ -19,11 +19,11 @@ ul{
 
 .button_1{
     height:38px;
-    background:#e8491d;
+    background:#cca7cc;
     border:0;
     padding-left:20px;
     padding-right:20px;
-    color: #ffffff;
+    color: #000000;
 }
 /*Header*/
 header{
@@ -95,7 +95,7 @@ header a:hover{
 #newsletter{
     padding:15px;
     color:#ffffff;
-    background:#35424a;
+    background:#05073a;
 }
 
 #newsletter h1{
@@ -136,6 +136,46 @@ footer{
     padding:20px;
     margin-top:20px;
     color:#ffffff;
-    background-color:##cca7cc;
+    background-color:#35424a;
     text-align: center;
 }
+
+/* Media Queries */
+@media(max-width: 768px){
+    header#branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#mail-col,
+    aside#sidebar{
+        float:none;
+        text-align:center;
+        width:100%;
+        
+    }
+
+
+header{
+    padding-bottom:20px;
+    
+}
+
+#showcase h1{
+    margin-top:40px;
+    
+}
+#newsletter button{
+    display:block;
+    width:100%;
+}
+
+#newsletter form input[type="email"]{
+    width:100%;
+    margin-bottom:5px;
+}
+}
+
+
+

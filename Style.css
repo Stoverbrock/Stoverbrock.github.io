@@ -129,7 +129,19 @@ header a:hover{
 }
 
 #boxes .box img{
-    width: 90px;
+    width: 100%;
+}
+#boxen{
+    margin-top:20px;
+}
+#boxen  .box{
+    text-align:center;
+    width:100%;
+    padding:10px;
+}
+
+#boxen .box img{
+    width: 75%;
 }
 
 footer{
@@ -148,6 +160,7 @@ footer{
     #newsletter h1,
     #newsletter form,
     #boxes .box,
+    #boxen .box,
     article#mail-col,
     aside#sidebar{
         float:none;

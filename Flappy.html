@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Flappy Game</title>
+<script type="text/javascript" src="processing.js"></script>
+</head>
+<body>
+<script type="text/processing">
+
+
+PImage background; PImage mario; PImage spoon; int x = 0; int Vy = 0; int Vx = 0; int Mx = 50; int My = 0; int Sx = -10; float Sy = 0; int SVx = 5; int SVy = 0; int count = 0; int gamestate = 0; float i = 0;
+
+
+
+void setup(){
+  size(1024, 800);
+  background = loadImage("./img/background1.png");
+  mario = loadImage("./img/Frosted.png");
+  spoon = loadImage("./img/spoon.png");
+  float i = random(0,1000);
+}
+void keyPressed(){
+  if (key == CODED){
+    if (keyCode == UP){
+      Vy = -10;}}
+  if (key == ' '){ 
+      image(spoon, Sx, Sy);}
+    }
+    
+
+
+void draw(){
+  image(background, count, 0);
+  image(background, width + count, 0);
+  //image(mario,-100,0);
+  count --;
+  if (count == -1000){
+    count = 0;
+  }
+  image(mario, Mx, My);
+  x--;
+  Vy++;
+  SVy++;
+  //Vx++;
+  //Sy = My;
+  //Sx = Mx;
+  Mx = Mx + Vx;
+  My = My + Vy;
+
+  if(mousePressed){
+     Vy = -10;
+  }
+  if (key == CODED){
+    if(keyCode == RIGHT){
+      Vx = 2;
+    }}
+  if (key == CODED){
+    if(keyCode == LEFT){
+      Vx = -2;
+    }}
+  if (key == '1'){ 
+    Sy = 50;
+    SVy = 0;
+    SVx = 20;
+    Sy = Sy + SVy;
+    Sx = Sx + SVx;
+    image(spoon, Sx, Sy);} 
+  if (Sx>1000){
+    Sx = 0;
+    SVx = 0;
+  }
+  if (My > 900){
+    gamestate = 2;
+  }
+  if (My < -180){
+    gamestate = 2;
+  }
+  if (Mx > 1000){
+    gamestate = 2;
+  }
+  if (Mx < -180){
+    gamestate = 2;
+  }
+  if (gamestate ==2){
+    My = 0;
+    Mx = 50;
+    Vy = 0;
+    Vx = 0;
+    textSize(40); fill(255,0,0);
+    text("You died", 420,300);
+    rect(410,350,200,75);
+    fill(0);
+    text("Restart", 440,400);
+    if(mouseX > 410 && mouseX < 610 && mouseY > 350 && mouseY < 425){
+      fill(0);
+      rect(0,0,1024,800);
+      textSize(200);
+      fill(255,0,0);
+      text("You died", 80,300);
+      rect(410,350,200,75);
+      textSize(300);
+      text("Restart", 0,630);
+      fill(0); textSize(40);
+      text("Restart", 440,400);
+      if(mousePressed){
+        gamestate = 0;
+        My = 200;
+      }
+    }
+  }
+
+  }
+  
+  
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>
